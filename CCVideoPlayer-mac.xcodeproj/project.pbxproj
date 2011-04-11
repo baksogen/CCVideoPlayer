@@ -532,7 +532,7 @@
 				E02A840A129F083500341C97 /* SimpleAudioEngine.h */,
 				E02A840B129F083500341C97 /* SimpleAudioEngine.m */,
 			);
-			path = CocosDenshion;
+			name = CocosDenshion;
 			sourceTree = "<group>";
 		};
 		E02A840C129F083500341C97 /* CocosDenshionExtras */ = {
