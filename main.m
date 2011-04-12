@@ -11,7 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 int main(int argc, char *argv[]) {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	int retVal = UIApplicationMain(argc, argv, nil, @"CCVideoPlayerAppDelegate");
@@ -23,9 +22,11 @@ int main(int argc, char *argv[]) {
 #elif defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
 
 #import <Cocoa/Cocoa.h>
+#import "MacGLView.h"
 
 int main(int argc, char *argv[])
 {
+	[MacGLView load_];
     return NSApplicationMain(argc,  (const char **) argv);
 }
 
