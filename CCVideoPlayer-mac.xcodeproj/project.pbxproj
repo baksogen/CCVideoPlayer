@@ -15,6 +15,8 @@
 		6D466CB31353D078005D6364 /* VideoPlayerImplMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466CAC1353D078005D6364 /* VideoPlayerImplMac.m */; };
 		6D466CB41353D078005D6364 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466CAE1353D078005D6364 /* VideoPlayer.m */; };
 		6D466D3C1353D52A005D6364 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D466D3B1353D52A005D6364 /* QTKit.framework */; };
+		6D466D851353D8B4005D6364 /* bait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6D466D841353D8B4005D6364 /* bait.mp4 */; };
+		6D466DA91353DACE005D6364 /* CustomVideoView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 6D466DA81353DACE005D6364 /* CustomVideoView.nib */; };
 		E01E6A3E121EDCD3001A484F /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E6A3D121EDCD3001A484F /* ApplicationServices.framework */; };
 		E01E6B36121EDCED001A484F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036A79E121B5C870037C5C6 /* QuartzCore.framework */; };
 		E01E6B49121EDCF4001A484F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036A79C121B5C720037C5C6 /* OpenGL.framework */; };
@@ -227,6 +229,8 @@
 		6D466CAD1353D078005D6364 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		6D466CAE1353D078005D6364 /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
 		6D466D3B1353D52A005D6364 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		6D466D841353D8B4005D6364 /* bait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = bait.mp4; path = Resources/bait.mp4; sourceTree = "<group>"; };
+		6D466DA81353DACE005D6364 /* CustomVideoView.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CustomVideoView.nib; path = Resources/CustomVideoView.nib; sourceTree = "<group>"; };
 		E01E663D121CA00A001A484F /* libcocos2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcocos2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01E6A3D121EDCD3001A484F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		E02A83D2129F000100341C97 /* CCVideoPlayer_macAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayer_macAppDelegate.h; sourceTree = "<group>"; };
@@ -492,6 +496,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D466DA81353DACE005D6364 /* CustomVideoView.nib */,
+				6D466D841353D8B4005D6364 /* bait.mp4 */,
 				E02A83F0129F01DF00341C97 /* MainMenu.xib */,
 				E02A83EE129F01DF00341C97 /* InfoPlist.strings */,
 				E02A83F2129F01DF00341C97 /* fps_images.png */,
@@ -965,6 +971,8 @@
 				E02A83F7129F01DF00341C97 /* MainMenu.xib in Resources */,
 				E02A83F8129F01DF00341C97 /* fps_images.png in Resources */,
 				E02A8529129F109200341C97 /* icon.icns in Resources */,
+				6D466D851353D8B4005D6364 /* bait.mp4 in Resources */,
+				6D466DA91353DACE005D6364 /* CustomVideoView.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
