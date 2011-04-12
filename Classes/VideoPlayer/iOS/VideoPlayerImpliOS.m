@@ -8,11 +8,11 @@
 
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 
+#import "VideoPlayer.h"
 #import "VideoPlayerImpliOS.h"
-#import "GameDirector.h"
 #import "MediaPlayer/MediaPlayer.h"
 #import "videoOverlayView.h"
-
+#import "cocos2d.h"
 
 
 @implementation VideoPlayerImpliOS
@@ -21,7 +21,7 @@
 
 - (id) init
 {
-    if ( self = [super init] )
+    if ( (self = [super init]) )
     {
         _theMovie = nil;
     }
@@ -33,7 +33,7 @@
 {
 	_playing = YES;
 	
-    [ [GameDirector sharedGameDirector] movieStartsPlaying]; //< was pause here
+    [ _delegate movieStartsPlaying]; //< was pause here
 	
     MPMoviePlayerController* theMovie = [[MPMoviePlayerController alloc] initWithContentURL:theURL];
     if (! theMovie)
@@ -131,11 +131,7 @@
 	[_videoOverlayView removeFromSuperview];
     [_videoOverlayView release];
 	
-	[ [GameDirector sharedGameDirector] movieWatchedTillTheEnd ]; 
-	//<BUG: здесь должна быть проверка на _cancelled, но ее нет
-	// в любом случае просмотр видео будет засчитан как полный просмотр до конца,
-	// так даже лучше - будет меньше бесить игрока 
-    [ [GameDirector sharedGameDirector] moviePlaybackFinished]; //< was resume here
+    [ _delegate moviePlaybackFinished]; 
 }
 
 - (void) cancelPlaying
@@ -161,8 +157,13 @@
 		[_videoOverlayView removeFromSuperview];
         [_videoOverlayView release];
         
-        [ [GameDirector sharedGameDirector] moviePlaybackFinished]; //< was resume here
+        [ _delegate moviePlaybackFinished];
     }
+}
+
+- (void)setDelegate: (id<VideoPlayerDelegate>) aDelegate
+{
+	_delegate = aDelegate;
 }
 
 - (void) updateOrientationWithOrientation: (UIDeviceOrientation) newOrientation
