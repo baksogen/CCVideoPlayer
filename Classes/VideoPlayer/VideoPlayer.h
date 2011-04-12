@@ -9,14 +9,22 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol VideoPlayerDelegate <NSObject>
+
+- (void) movieStartsPlaying;
+- (void) moviePlaybackFinished;
+
+@end
+
 
 @interface VideoPlayer : NSObject
 {
 }
 
-+ (void) playMovieWithFile: (NSString *) file;
+// sets new delegate, replaces old if it exists, doesn't retain it
++ (void) setDelegate: (id<VideoPlayerDelegate>) aDelegate;
 
-//+ (BOOL) isPlaying;
++ (void) playMovieWithFile: (NSString *) file;
 
 + (void) cancelPlaying;
 

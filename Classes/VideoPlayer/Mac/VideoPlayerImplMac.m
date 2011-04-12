@@ -7,8 +7,7 @@
 //
 
 #import "VideoPlayerImplMac.h"
-#import "GameDirector.h"
-#import "CCEventDispatcher.h"
+#import "cocos2d.h"
 #import "MyMovieView.h"
 #import "CustomVideoViewController.h"
 
@@ -49,7 +48,7 @@ NSString *const kVideoTitle		= @"CustomVideoView";
 		return;
 	
 	// Prepare other systems for Playback
-	[[GameDirector sharedGameDirector] movieStartsPlaying];
+	[delegate movieStartsPlaying];
 	
 	//Setup Movie	
 	[movie setAttribute:[NSNumber numberWithBool: YES] forKey:QTMovieOpenAsyncRequiredAttribute ];
@@ -88,6 +87,11 @@ NSString *const kVideoTitle		= @"CustomVideoView";
 	[self movieFinishedCallback: nil];
 }
 
+- (void)setDelegate: (id<VideoPlayerDelegate>) aDelegate;
+{
+	delegate = aDelegate;
+}
+
 #pragma mark Other Stuff
 
 -(void)movieFinishedCallback:(NSNotification*)aNotification
@@ -118,13 +122,7 @@ NSString *const kVideoTitle		= @"CustomVideoView";
 	self.retainedView = nil;
 	self.videoViewController = nil;
 	
-    
-	// Trigger GD
-	[ [GameDirector sharedGameDirector] movieWatchedTillTheEnd ]; 
-		//<BUG: здесь должна быть проверка на _cancelled, но ее нет
-		// в любом случае просмотр видео будет засчитан как полный просмотр до конца,
-		// так даже лучше - будет меньше бесить игрока 
-    [ [GameDirector sharedGameDirector] moviePlaybackFinished]; //< was resume here
+	[delegate moviePlaybackFinished];
 }
 
 @end

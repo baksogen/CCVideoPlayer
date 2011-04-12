@@ -131,10 +131,10 @@ static  VideoPlayerImpl *_impl = nil;
     [_impl cancelPlaying];
 }
 
-//+ (BOOL) isPlaying
-//{
-//	return [_impl isPlaying];
-//}
++ (void) setDelegate: (id<VideoPlayerDelegate>) aDelegate
+{
+	[_impl setDelegate: aDelegate];
+}
 
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 + (void) updateOrientationWithOrientation: (UIDeviceOrientation) newOrientation

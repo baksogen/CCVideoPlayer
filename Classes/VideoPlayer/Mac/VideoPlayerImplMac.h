@@ -10,6 +10,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <QTKit/QTKit.h>
+#import "VideoPlayer.h"
+
 @class CustomVideoViewController;
 @class MyMovieView;
 
@@ -18,6 +20,9 @@
 {	
 	CustomVideoViewController *videoViewController;	
 	NSView *retainedView;
+	
+	//weak ref
+	id<VideoPlayerDelegate> delegate;
 }
 //private property
 @property (readwrite, retain) CustomVideoViewController *videoViewController;
@@ -26,6 +31,8 @@
 - (void)playMovieAtURL:(NSURL*)theURL;
 - (void)playMovieAtURL:(NSURL*)theURL attachedInView: (NSView *) aView;
 - (void)cancelPlaying;
+
+- (void)setDelegate: (id<VideoPlayerDelegate>) aDelegate;
 
 @end
 
