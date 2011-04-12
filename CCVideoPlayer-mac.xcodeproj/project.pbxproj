@@ -14,6 +14,7 @@
 		6D466CB21353D078005D6364 /* MyMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466CAA1353D078005D6364 /* MyMovieView.m */; };
 		6D466CB31353D078005D6364 /* VideoPlayerImplMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466CAC1353D078005D6364 /* VideoPlayerImplMac.m */; };
 		6D466CB41353D078005D6364 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466CAE1353D078005D6364 /* VideoPlayer.m */; };
+		6D466D3C1353D52A005D6364 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D466D3B1353D52A005D6364 /* QTKit.framework */; };
 		E01E6A3E121EDCD3001A484F /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E6A3D121EDCD3001A484F /* ApplicationServices.framework */; };
 		E01E6B36121EDCED001A484F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036A79E121B5C870037C5C6 /* QuartzCore.framework */; };
 		E01E6B49121EDCF4001A484F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E036A79C121B5C720037C5C6 /* OpenGL.framework */; };
@@ -225,6 +226,7 @@
 		6D466CAC1353D078005D6364 /* VideoPlayerImplMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerImplMac.m; sourceTree = "<group>"; };
 		6D466CAD1353D078005D6364 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		6D466CAE1353D078005D6364 /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		6D466D3B1353D52A005D6364 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		E01E663D121CA00A001A484F /* libcocos2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcocos2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01E6A3D121EDCD3001A484F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		E02A83D2129F000100341C97 /* CCVideoPlayer_macAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVideoPlayer_macAppDelegate.h; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				E076E5BC1225E97900DE0DA2 /* libz.dylib in Frameworks */,
 				E08AA04B12C0EDC8000341BD /* OpenAL.framework in Frameworks */,
 				E08AA04D12C0EEC0000341BD /* AudioToolbox.framework in Frameworks */,
+				6D466D3C1353D52A005D6364 /* QTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +458,7 @@
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				6D466D3B1353D52A005D6364 /* QTKit.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
