@@ -6,6 +6,8 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
+
 #import "MyMovieView.h"
 #import "VideoPlayer.h"
 
@@ -63,3 +65,5 @@
 }
 
 @end
+
+#endif

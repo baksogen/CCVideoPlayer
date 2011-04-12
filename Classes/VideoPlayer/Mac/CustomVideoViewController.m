@@ -48,6 +48,8 @@ Copyright � 2007 Apple Inc. All Rights Reserved
 
 */
 
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
+
 #import "CustomVideoViewController.h"
 
 @implementation CustomVideoViewController
@@ -59,3 +61,5 @@ Copyright � 2007 Apple Inc. All Rights Reserved
 }*/
 
 @end
+
+#endif

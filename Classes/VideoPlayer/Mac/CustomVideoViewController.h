@@ -44,9 +44,11 @@ AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
 STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-Copyright © 2007 Apple Inc. All Rights Reserved
+Copyright ï¿½ 2007 Apple Inc. All Rights Reserved
 
 */
+
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
 
 #import <Cocoa/Cocoa.h>
 #import <QTKit/QTKit.h>
@@ -56,3 +58,5 @@ Copyright © 2007 Apple Inc. All Rights Reserved
 }
 
 @end
+
+#endif
