@@ -41,6 +41,8 @@
 
 @implementation MacGLView
 
+static NSResponder * _wideKeyDelegate = nil;
+
 @synthesize eventDelegate = eventDelegate_;
 
 +(void) load_
@@ -201,17 +203,35 @@
 }
 
 - (void)keyDown:(NSEvent *)theEvent
-{
+{	
+	if (_wideKeyDelegate)
+	{
+		[_wideKeyDelegate performSelector:_cmd withObject:theEvent]; 
+		return;
+	} //<psi:	
+	
 	DISPATCH_EVENT(theEvent, _cmd);
 }
 
 - (void)keyUp:(NSEvent *)theEvent
-{
+{	
+	if (_wideKeyDelegate)
+	{
+		[_wideKeyDelegate performSelector:_cmd withObject:theEvent]; 
+		return;
+	} //<psi:	
+	
 	DISPATCH_EVENT(theEvent, _cmd);
 }
 
 - (void)flagsChanged:(NSEvent *)theEvent
 {
+	if (_wideKeyDelegate)
+	{
+		[_wideKeyDelegate performSelector:_cmd withObject:theEvent]; 
+		return;
+	} //<psi:	
+	
 	DISPATCH_EVENT(theEvent, _cmd);
 }
 
@@ -234,6 +254,11 @@
 - (void)touchesCancelledWithEvent:(NSEvent *)theEvent
 {
 	DISPATCH_EVENT(theEvent, _cmd);
+}
+
++ (void) setWideKeyboardDelegate: (NSResponder *) aDelegate
+{
+	_wideKeyDelegate = aDelegate;
 }
 
 @end

@@ -83,6 +83,10 @@
 
 // private
 +(void) load_;
+
+//psi: keyboard delegate for VideoPLayerImplMac - i don't know why i cant change firstResponder in fullscreen mode
+// aDelegate is weak ref
++ (void) setWideKeyboardDelegate: (NSResponder *) aDelegate;
 @end
 
 #endif // __MAC_OS_X_VERSION_MAX_ALLOWED
