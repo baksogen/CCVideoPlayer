@@ -49,6 +49,12 @@
 		50F414F01069373D002A0D5E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F414EC1069373D002A0D5E /* Default.png */; };
 		50F414F11069373D002A0D5E /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F414ED1069373D002A0D5E /* fps_images.png */; };
 		50F414F21069373D002A0D5E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F414EE1069373D002A0D5E /* Icon.png */; };
+		6D466C9A1353D069005D6364 /* videoOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466C8E1353D069005D6364 /* videoOverlayView.m */; };
+		6D466C9B1353D069005D6364 /* VideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466C901353D069005D6364 /* VideoPlayerImpliOS.m */; };
+		6D466C9C1353D069005D6364 /* CustomVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466C931353D069005D6364 /* CustomVideoViewController.m */; };
+		6D466C9D1353D069005D6364 /* MyMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466C951353D069005D6364 /* MyMovieView.m */; };
+		6D466C9E1353D069005D6364 /* VideoPlayerImplMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466C971353D069005D6364 /* VideoPlayerImplMac.m */; };
+		6D466C9F1353D069005D6364 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D466C991353D069005D6364 /* VideoPlayer.m */; };
 		DC6640030F83B3EA000B3E49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640040F83B3EA000B3E49 /* OpenAL.framework */; };
 		DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -293,6 +299,18 @@
 		50F414ED1069373D002A0D5E /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
 		50F414EE1069373D002A0D5E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		50F414EF1069373D002A0D5E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D466C8D1353D069005D6364 /* videoOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoOverlayView.h; sourceTree = "<group>"; };
+		6D466C8E1353D069005D6364 /* videoOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoOverlayView.m; sourceTree = "<group>"; };
+		6D466C8F1353D069005D6364 /* VideoPlayerImpliOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerImpliOS.h; sourceTree = "<group>"; };
+		6D466C901353D069005D6364 /* VideoPlayerImpliOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerImpliOS.m; sourceTree = "<group>"; };
+		6D466C921353D069005D6364 /* CustomVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVideoViewController.h; sourceTree = "<group>"; };
+		6D466C931353D069005D6364 /* CustomVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVideoViewController.m; sourceTree = "<group>"; };
+		6D466C941353D069005D6364 /* MyMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieView.h; sourceTree = "<group>"; };
+		6D466C951353D069005D6364 /* MyMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieView.m; sourceTree = "<group>"; };
+		6D466C961353D069005D6364 /* VideoPlayerImplMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerImplMac.h; sourceTree = "<group>"; };
+		6D466C971353D069005D6364 /* VideoPlayerImplMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerImplMac.m; sourceTree = "<group>"; };
+		6D466C981353D069005D6364 /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		6D466C991353D069005D6364 /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
 		DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC6640040F83B3EA000B3E49 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -573,6 +591,7 @@
 		2D500B1D0D5A766B00DBA0E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6D466C8B1353D069005D6364 /* VideoPlayer */,
 				E0F80F5D120A0182005866B8 /* GameConfig.h */,
 				506EDC2F102F528A00A389B3 /* HelloWorldLayer.h */,
 				506EDC30102F528A00A389B3 /* HelloWorldLayer.m */,
@@ -661,6 +680,41 @@
 				50F414EF1069373D002A0D5E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6D466C8B1353D069005D6364 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6D466C8C1353D069005D6364 /* iOS */,
+				6D466C911353D069005D6364 /* Mac */,
+				6D466C981353D069005D6364 /* VideoPlayer.h */,
+				6D466C991353D069005D6364 /* VideoPlayer.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		6D466C8C1353D069005D6364 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6D466C8D1353D069005D6364 /* videoOverlayView.h */,
+				6D466C8E1353D069005D6364 /* videoOverlayView.m */,
+				6D466C8F1353D069005D6364 /* VideoPlayerImpliOS.h */,
+				6D466C901353D069005D6364 /* VideoPlayerImpliOS.m */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		6D466C911353D069005D6364 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				6D466C921353D069005D6364 /* CustomVideoViewController.h */,
+				6D466C931353D069005D6364 /* CustomVideoViewController.m */,
+				6D466C941353D069005D6364 /* MyMovieView.h */,
+				6D466C951353D069005D6364 /* MyMovieView.m */,
+				6D466C961353D069005D6364 /* VideoPlayerImplMac.h */,
+				6D466C971353D069005D6364 /* VideoPlayerImplMac.m */,
+			);
+			path = Mac;
 			sourceTree = "<group>";
 		};
 		E02BB764126CC223006E46A2 /* cocos2d */ = {
@@ -1111,6 +1165,12 @@
 				1F3B9A2D0EF2145700286867 /* CCVideoPlayerAppDelegate.m in Sources */,
 				506EDC31102F528A00A389B3 /* HelloWorldLayer.m in Sources */,
 				E0F80F60120A0182005866B8 /* RootViewController.m in Sources */,
+				6D466C9A1353D069005D6364 /* videoOverlayView.m in Sources */,
+				6D466C9B1353D069005D6364 /* VideoPlayerImpliOS.m in Sources */,
+				6D466C9C1353D069005D6364 /* CustomVideoViewController.m in Sources */,
+				6D466C9D1353D069005D6364 /* MyMovieView.m in Sources */,
+				6D466C9E1353D069005D6364 /* VideoPlayerImplMac.m in Sources */,
+				6D466C9F1353D069005D6364 /* VideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
