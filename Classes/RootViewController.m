@@ -15,6 +15,7 @@
 
 #import "RootViewController.h"
 #import "GameConfig.h"
+#import "VideoPlayer.h"
 
 @implementation RootViewController
 
@@ -125,6 +126,11 @@
 		rect.size.height *= contentScaleFactor;
 	}
 	glView.frame = rect;
+	
+	
+	// update video player orienation
+	UIDeviceOrientation deviceOrientation = (UIDeviceOrientation)toInterfaceOrientation;
+	[VideoPlayer updateOrientationWithOrientation: deviceOrientation ];
 }
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController
 
