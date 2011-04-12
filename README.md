@@ -16,17 +16,18 @@ Features
 Limitations
 ---------------
 
-1. It's recommended to call VideoPlayer methods from main thread. On Mac OS X 10.6.5+ it hangs up if play started from thread other than main. (Probably it's easy to integrate performSelectorOnMainThread right into VideoPlayer. Issue #2)
+1. It's recommended to call VideoPlayer methods from main thread. On Mac OS X 10.6.5+ it hangs up if play started from thread other than main. (Probably it's easy to integrate performSelectorOnMainThread right into VideoPlayer. Issue #2 )
 
 
 Usage
 -----------------------
 
 VideoPlayer by itself is located in Classes/VideoPlayer folder.
-CustomVideoView.nib is located in Resources and needed only for Mac. (Probably it's possible to remove it and load view with code only. Issue #3)
+CustomVideoView.nib is located in Resources and needed only for Mac. (Probably it's possible to remove it and load view with code only. Issue #3 )
 
 Also it needs a little bit changed MacGLView - it was modified in commit with SHA: 3b5339070dadab02e9b7381c2becebbd616ade31
-Without modified MacGLView VideoPlayer will compile with warnings and crash at starting playback on a Mac (Probably it's possible to fix this, so it will work without modifying MacGLView, but cancelling video by pressing a key will not work. Issue #4 )
+
+Without modified MacGLView VideoPlayer will compile with warnings and crash at starting playback on a Mac ( Probably it's possible to fix this, so it will work without modifying MacGLView, but cancelling video by pressing a key will not work. Issue #4 )
 
 To link it you need MediaPlayer.framework for iOS & QTKit for Mac
 
