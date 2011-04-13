@@ -9,10 +9,10 @@
 
 #import <Cocoa/Cocoa.h>
 #import "QTKit/QTKit.h"
+#import "CCEventDispatcher.h"
 
-@interface MyMovieView : QTMovieView {
-
-}
+@interface MyMovieView : QTMovieView <CCKeyboardEventDelegate> 
+{}
 
 @end
 

@@ -35,9 +35,16 @@
 
 - (void) keyDown:(NSEvent *)theEvent
 {
-	
 	if ( ![theEvent isARepeat] )
 		[VideoPlayer cancelPlaying];
+}
+
+-(BOOL) ccKeyDown:(NSEvent*)event
+{
+	if ( ![event isARepeat] )
+		[VideoPlayer cancelPlaying];
+	
+	return NO;
 }
 
 - (void)viewDidMoveToWindow

@@ -25,10 +25,6 @@ Usage
 VideoPlayer by itself is located in Classes/VideoPlayer folder.
 CustomVideoView.nib is located in Resources and needed only for Mac. (Probably it's possible to remove it and load view with code only. Issue #3 )
 
-Also it needs a little bit changed MacGLView - it was modified in commit with SHA: 3b5339070dadab02e9b7381c2becebbd616ade31
-
-Without modified MacGLView VideoPlayer will compile with warnings and crash at starting playback on a Mac ( Probably it's possible to fix this, so it will work without modifying MacGLView, but cancelling video by pressing a key will not work. Issue #4 )
-
 To link it you need MediaPlayer.framework for iOS & QTKit for Mac
 
 To play videofile foo.mp4 simply use:

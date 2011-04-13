@@ -70,8 +70,8 @@ NSString *const kVideoTitle		= @"CustomVideoView";
 	[[self.videoViewController view] setFrame: [windowContentView bounds]];
 	
 	// Start handling events on movie view
-	//[[windowContentView window] makeFirstResponder: [self.videoViewController view] ];
-	[MacGLView setWideKeyboardDelegate: [self.videoViewController view]];
+	[[CCEventDispatcher sharedDispatcher] addKeyboardDelegate: (MyMovieView *)[self.videoViewController view] 
+													 priority: NSIntegerMin ];
 		
 	// Register for end notification
 	[[NSNotificationCenter defaultCenter] addObserver: self 
@@ -113,7 +113,7 @@ NSString *const kVideoTitle		= @"CustomVideoView";
 	[[self retainedView] setFrame:[windowContentView bounds]];
 	
 	// Stop handling events on movie view
-	[MacGLView setWideKeyboardDelegate: nil];
+	[[CCEventDispatcher sharedDispatcher] removeKeyboardDelegate: self];
 	[[windowContentView window] makeFirstResponder: self.retainedView ];
 	
 	
