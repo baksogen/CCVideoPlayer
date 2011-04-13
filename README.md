@@ -10,15 +10,14 @@ Features
 
    * Universal support (iPhone + iPad + Mac)
    * Play / Cancel (by tap or key pressed on mac)
+   * Plays file from Caches or Resources directory (if found)
    * Easy to use
 
 
 Limitations
 ---------------
 
-1. It's recommended to call VideoPlayer methods from main thread. On Mac OS X 10.6.5+ it hangs up if play started from thread other than main. (Probably it's easy to integrate performSelectorOnMainThread right into VideoPlayer. Issue #2 )
-
-2. iOS: Supported orientations are only Landscape Left & Landscape Right ( Issue #5 )
+1. iOS: Supported orientations are only Landscape Left & Landscape Right ( Issue #5 )
 
 
 Usage

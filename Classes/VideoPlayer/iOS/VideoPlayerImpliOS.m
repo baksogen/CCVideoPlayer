@@ -183,6 +183,13 @@
 		[ [_theMovie view] setTransform: CGAffineTransformMakeRotation(M_PI_2) ];
 }
 
+- (void) updateOrientationWithOrientationNumber: (NSNumber *) newOrientationNumber
+{
+	UIDeviceOrientation orientation = (UIDeviceOrientation)[newOrientationNumber intValue];
+	
+	[self updateOrientationWithOrientation: orientation];
+}
+
 
 @end
 

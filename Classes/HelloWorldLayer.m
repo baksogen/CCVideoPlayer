@@ -55,18 +55,7 @@
 
 - (void) testVideoPlayer
 {
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-	[  self performSelectorOnMainThread: @selector(playMovieWithFile:) 
-							 withObject: @"bait.mp4" 
-						  waitUntilDone: NO  ];
-#elif defined(__IPHONE_OS_VERSION_MAX_ALLOWED)
 	[VideoPlayer playMovieWithFile: @"bait.mp4"];
-#endif
-}
-
-- (void) playMovieWithFile: (NSString *) filename
-{
-	[VideoPlayer playMovieWithFile: filename];
 }
 
 - (void) moviePlaybackFinished

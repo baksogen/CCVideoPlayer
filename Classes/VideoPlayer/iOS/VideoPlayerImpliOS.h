@@ -14,6 +14,8 @@
 @class MPMoviePlayerController;
 @class VideoOverlayView;
 
+
+
 #define VIDEO_PLAYER_IMPL_SUPER_CLASS VideoPlayerImpliOS
 @interface VideoPlayerImpliOS : NSObject
 {
@@ -35,6 +37,7 @@
 - (void)setDelegate: (id<VideoPlayerDelegate>) aDelegate;
 
 - (void) updateOrientationWithOrientation: (UIDeviceOrientation) newOrientation;
+- (void) updateOrientationWithOrientationNumber: (NSNumber *) newOrientationNumber;
 
 
 @end

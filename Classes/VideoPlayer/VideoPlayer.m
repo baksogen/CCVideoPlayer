@@ -59,7 +59,10 @@ static  VideoPlayerImpl *_impl = nil;
 {
    if (self == [VideoPlayer class])
    {
-	   _impl = [VideoPlayerImpl newImpl];
+	   @synchronized( self)
+	   {
+		   _impl = [VideoPlayerImpl newImpl];
+	   }
    }
 }
 
@@ -75,7 +78,12 @@ static  VideoPlayerImpl *_impl = nil;
 		if (moviePath)
 		{
 			movieURL = [NSURL fileURLWithPath:moviePath];
-			[_impl playMovieAtURL: movieURL];
+			
+			// If the current thread is the main thread,than
+			// this message will be processed immediately.
+			[ _impl performSelectorOnMainThread: @selector(playMovieAtURL:) 
+									 withObject: movieURL
+								  waitUntilDone: [NSThread isMainThread]  ];
 		}
 	}    
 }
@@ -117,7 +125,11 @@ static  VideoPlayerImpl *_impl = nil;
     if ( [[NSFileManager defaultManager] fileExistsAtPath: cachedVideoPath] )
     {
         NSURL *url = [NSURL fileURLWithPath: cachedVideoPath];
-        [ _impl playMovieAtURL: url ];
+        // If the current thread is the main thread,than
+		// this message will be processed immediately.
+		[ _impl performSelectorOnMainThread: @selector(playMovieAtURL:) 
+								 withObject: url
+							  waitUntilDone: [NSThread isMainThread]  ];
         return;
     }
     
@@ -128,18 +140,30 @@ static  VideoPlayerImpl *_impl = nil;
 
 + (void) cancelPlaying
 {
-    [_impl cancelPlaying];
+	// If the current thread is the main thread,than
+	// this message will be processed immediately.
+	[ _impl performSelectorOnMainThread: @selector(cancelPlaying) 
+							 withObject: nil
+						  waitUntilDone: [NSThread isMainThread]  ];
 }
 
 + (void) setDelegate: (id<VideoPlayerDelegate>) aDelegate
 {
-	[_impl setDelegate: aDelegate];
+	// If the current thread is the main thread,than
+	// this message will be processed immediately.
+	[ _impl performSelectorOnMainThread: @selector(setDelegate:) 
+							 withObject: aDelegate
+						  waitUntilDone: [NSThread isMainThread]  ];
 }
 
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
 + (void) updateOrientationWithOrientation: (UIDeviceOrientation) newOrientation
 {
-	[_impl updateOrientationWithOrientation: newOrientation];
+	// If the current thread is the main thread,than
+	// this message will be processed immediately.
+	[ _impl performSelectorOnMainThread: @selector(updateOrientationWithOrientationNumber:) 
+							 withObject: [NSNumber numberWithInt: (int)newOrientation]
+						  waitUntilDone: [NSThread isMainThread]  ];
 }
 #endif
 
