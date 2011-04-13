@@ -69,5 +69,5 @@ VideoPlayer is a part of stuff, that i used in [iTraceur - Freerunning / Platfor
 I would like to share with Open Source community as much as possible, cause Open Source helped me a lot with iTraceur.
 So questions, suggestions and corrections are always welcome.
 
-[iTraceurLink]: http://itunes.apple.com/ru/app/itraceur-hd-parkour-freerunning/id397615614?mt=8 "iTraceur App Store Link"
+[iTraceurLink]: http://itunes.apple.com/us/app/itraceur-parkour-freerunning/id374163905?mt=8& "iTraceur App Store Link"
 
