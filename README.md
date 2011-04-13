@@ -18,6 +18,8 @@ Limitations
 
 1. It's recommended to call VideoPlayer methods from main thread. On Mac OS X 10.6.5+ it hangs up if play started from thread other than main. (Probably it's easy to integrate performSelectorOnMainThread right into VideoPlayer. Issue #2 )
 
+2. iOS: Supported orientations are only Landscape Left & Landscape Right ( Issue #5 )
+
 
 Usage
 -----------------------
@@ -29,6 +31,9 @@ To link it you need MediaPlayer.framework for iOS & QTKit for Mac
 
 To play videofile foo.mp4 simply use:
 
+	// First tries to find file in NSCachesDirectory and play it from there
+	// Second tries to find file in resources directory
+	// Does nothing if file not found 
     [VideoPlayer playMovieWithFile: @"bait.mp4"];
 
 VideoPlayer ignores orientation change by itself, but you can manually change it's orientation:
