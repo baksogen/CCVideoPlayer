@@ -1,3 +1,8 @@
+ATTENTION: SOURCE MOVED
+=================
+VideoPlayer is now known as CCVideoPlayer and is available as a part of cocos2d-iphone-extensions repo: https://github.com/cocos2d/cocos2d-iphone-extensions   
+All further development will be done there. This repo is outdated now.
+
 VideoPlayer
 ==================
 
