@@ -24,8 +24,24 @@
     if ( (self = [super init]) )
     {
         _theMovie = nil;
+        
+        // add notification to know when app will become active when app goes in background player will change state to paused...
+       [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(appDidBecomeActive:)
+                                                     name:UIApplicationDidBecomeActiveNotification
+                                                   object:nil];
+                                                   
     }
     return self;
+}
+
+//this method will resume it if will need....
+-(void)appDidBecomeActive:(NSNotification *)notification {
+    if (_theMovie != nil && self.isPlaying) {
+        if (_theMovie.playbackState == MPMoviePlaybackStatePaused) {
+            [_theMovie play];
+        }
+    }
 }
 
 //----- playMovieAtURL: ------
